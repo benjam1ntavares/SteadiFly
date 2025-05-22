@@ -1,29 +1,7 @@
-/* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
-/* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
+
 #include "main.h"
 #include "servo.h"
 #include "led.h"
-
-
-
-/* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 
 int main(void)
@@ -31,11 +9,8 @@ int main(void)
 
   HAL_Init();
   SystemClock_Config();
-  setup_TIM2();
   LED_Config();
-
-
-
+  setup_TIM2();
 
 
   while (1)
@@ -47,10 +22,12 @@ int main(void)
 
 
 
-/**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+
+
+
+
+
+
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
@@ -90,6 +67,7 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 }
+
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
